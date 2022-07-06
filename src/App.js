@@ -1,22 +1,31 @@
 import Header from "./components/Header";
 import WelcomeWorld from "./components/WelcomeWorld";
+import CatalogGame from "./components/CatalogGame";
+import CreateGame from "./components/CreateGame";
 
 
 function App() {
-  return (
-    <div id="box">
 
-        <Header/>
+    const routes = {
+        '/home': WelcomeWorld,
+        '/games': CatalogGame,
+        'create=game': CreateGame
+    };
 
-        <main id="main-content">
+    return (
+        <div id="box">
 
-            <WelcomeWorld/>
-        </main>
+            <Header />
 
-        
-        
-    </div>
-  );
+            <main id="main-content">
+
+                <WelcomeWorld />
+            </main>
+
+
+
+        </div>
+    );
 }
 
 export default App;
